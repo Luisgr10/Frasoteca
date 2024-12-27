@@ -1,11 +1,13 @@
 import { useState } from "react"
 import Articles from "./Components/Articles"
 import Header from "./Components/Header"
+import { db } from "./data/db"
 
 
 function Home() {
 
-  
+  const [data, setData] = useState(db)
+
   return (
     <>
 
@@ -15,7 +17,11 @@ function Home() {
         <h2 className="text-center">Nuestra Colección</h2>
 
         <div className="row mt-5">
-           <Articles/>
+          {data.map((item) => (
+              <Articles key={item.id}
+              articles={item}/>
+          ))}
+         
         </div>
     </main>
 
