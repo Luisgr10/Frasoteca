@@ -1,3 +1,5 @@
+import type { items } from "../Types"
+
 export const db : items[] = [
     {
         id: 1,

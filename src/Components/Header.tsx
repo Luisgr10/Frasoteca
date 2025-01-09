@@ -1,6 +1,23 @@
+import type { CartItem, items } from "../Types"
 
+type HeaderProps = {
+    cart: CartItem[]
+    removeFromCart: (id : items['id']) => void
+    increaseQuantity: (id : items['id']) => void
+    decreaseQuantity: (id : items['id']) => void
+    clearCart: () => void
+    isEmpty: boolean
+    cartTotal: number
+}
 
-function Header({ cart, removeFromCart, increaseQuantity, decreaseQuantity, clearCart, isEmpty, cartTotal }) {
+function Header({ 
+    cart, 
+    removeFromCart, 
+    increaseQuantity, 
+    decreaseQuantity, 
+    clearCart, 
+    isEmpty, 
+    cartTotal } : HeaderProps) {
 
    
     
