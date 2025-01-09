@@ -1,6 +1,11 @@
+import type { items } from "../Types"
 
+type ArticlesProps = {
+    articles : items
+    addToCart : (item : items) => void
+}
 
-function Articles({articles, addToCart}) {
+function Articles({articles, addToCart} : ArticlesProps) {
 
     const {name, image, description, price} = articles
 

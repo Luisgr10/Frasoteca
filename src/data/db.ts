@@ -1,4 +1,4 @@
-export const db = [
+export const db : items[] = [
     {
         id: 1,
         name: 'Lukather',
